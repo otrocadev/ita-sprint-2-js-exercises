@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function exercises</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+  </head>
+  <body>
+    <h1>Arrow function exercises</h1>
+    <div id="console-explanation">
+      <span>
+        All executions of the exercises will display on the console!
+      </span>
+      <img src="./arrow.svg" alt="" />
+    </div>
+    <article>
+      <h2>Exercici 1</h2>
+      <pre>
+        <code class="language-javascript">
+            const addition = (a, b) => {
+                return a + b
+            }
+        </code>
+        </pre>
+      <button id="exercise1-btn">Execute with a = 12, b = 24</button>
+    </article>
+    <article>
+      <h2>Exercici 2</h2>
+      <pre>
+        <code class="language-javascript">
+            const randomNumber = () => {
+                return Math.floor(Math.random() * 101)
+            }
+        </code>
+        </pre>
+      <button id="exercise2-btn">Execute</button>
+    </article>
+
+    <script>
+      const addition = (a, b) => {
+        return a + b
+      }
+
+      const randomNumber = () => {
+        return Math.floor(Math.random() * 101)
+      }
+
+      const exercise1Btn = document.getElementById('exercise1-btn')
+      exercise1Btn.addEventListener('click', (e) => {
+        result = addition(12, 24)
+        console.log(result)
+      })
+
+      const exercise2Btn = document.getElementById('exercise2-btn')
+      exercise2Btn.addEventListener('click', (e) => {
+        result = randomNumber()
+        console.log(result)
+      })
+    </script>
+  </body>
+</html>
