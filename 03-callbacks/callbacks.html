@@ -28,16 +28,11 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const processFunction = (number, callback) => {
+            callback(number)
+          }
         </code>
       </pre>
-      <pre>
-        <h3>Code for its execution:</h3>
-        <code class="language-javascript">
-          
-        </code>
-      </pre>
-      <button id="exercise1-btn">Execute</button>
     </article>
 
     <article>
@@ -45,50 +40,48 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
+          const calculator = (a, b, callback) => {
+            return callback(a, b)
+          }
           
+          const addition = (a, b) => {
+            return a + b
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-
+          const result = calculator(2, 5, addition)
+          console.log(result)
         </code>
       </pre>
       <button id="exercise2-btn">Execute</button>
     </article>
 
     <article>
-      <h2>Exercise 3.1</h2>
+      <h2>Exercise 3</h2>
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
+          const waitAndWave = (name, callback) => {
+            setTimeout(() => {
+              callback(name)
+            }, 2000)
+          }
           
+          const wave = (name) => {
+            console.log(`How are you doing, ${name} ?`)
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          
+          waitAndWave('John', wave)
         </code>
       </pre>
-      <button id="exercise31-btn">Execute</button>
-    </article>
-
-    <article>
-      <h2>Exercise 3.2</h2>
-      <pre>
-        <h3>Function declaration:</h3>
-        <code class="language-javascript">
-          
-        </code>
-      </pre>
-      <pre>
-        <h3>Code for its execution:</h3>
-        <code class="language-javascript">
-
-        </code>
-      </pre>
-      <button id="exercise32-btn">Execute</button>
+      <button id="exercise3-btn">Execute</button>
     </article>
 
     <article>
@@ -96,16 +89,48 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
+          const processElements = (numbers = [], callback) => {
+            numbers.forEach((number) => {
+              callback(number)
+            })
+          }
           
+          const screamNumber = (number) => {
+            console.log(`YOUR NUMBER IS ${number}!!!!`)
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-
+          processElements([2, 4, 6, 8], screamNumber)
         </code>
       </pre>
       <button id="exercise4-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 5</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const processString = (word, callback) => {
+            const capitalizedWord = word.toUpperCase()
+            callback(capitalizedWord)
+          }
+          
+          const showWord = (word) => {
+            console.log(`Your apitalized word is ${word}`)
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          processString('hello', showWord)
+        </code>
+      </pre>
+      <button id="exercise5-btn">Execute</button>
     </article>
 
     <footer>
