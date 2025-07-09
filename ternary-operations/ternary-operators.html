@@ -50,33 +50,72 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-            
+          const biggerNumber = (number1, number2) => {
+            number1 > number2
+              ? console.log(
+                  `${number1} is bigger than ${number2}, so the first number is bigger`
+                )
+              : console.log(
+                  `${number1} is not bigger than ${number2}, so the second number is bigger`
+                )
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          
+          biggerNumber(12, 13)
+          biggerNumber(222, 1)
         </code>
       </pre>
       <button id="exercise2-btn">Execute</button>
     </article>
 
     <article>
-      <h2>Exercise 3</h2>
+      <h2>Exercise 3.1</h2>
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const numberSign = (number) => {
+            number === 0
+              ? console.log(`The number ${number} is zero!`)
+              : number > 0
+              ? console.log(`The number ${number} is bigger than zero`)
+              : console.log(`The number ${number} is smaller than zero`)
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          
+          numberSign(33)
+          numberSign(0)
+          numberSign(-1999)
         </code>
       </pre>
-      <button id="exercise3-btn">Execute</button>
+      <button id="exercise31-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 3.2</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const findMax = (a, b, c) => {
+            let maxNumber = undefined
+            a > b ? (maxNumber = a) : (maxNumber = b)
+            c > maxNumber ? (maxNumber = c) : (maxNumber = maxNumber)
+            console.log(maxNumber)
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          findMax(22, 13, 24)
+        </code>
+      </pre>
+      <button id="exercise32-btn">Execute</button>
     </article>
 
     <article>
@@ -84,34 +123,26 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const isItEven = (numbers = []) => {
+            for (let i = 0; i < numbers.length; i++) {
+              const message = 
+                `The value of the position ${i} in the array is ${numbers[i]}, so it is an `
+              numbers[i] % 2 == 0
+                ? console.log(message + 'even number')
+                : console.log(message + 'uneven number')
+            }
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          
+          isItEven([12, 13, 25, 33])
         </code>
       </pre>
       <button id="exercise4-btn">Execute</button>
     </article>
 
-    <article>
-      <h2>Exercise 5</h2>
-      <pre>
-        <h3>Function declaration:</h3>
-        <code class="language-javascript">
-          
-        </code>
-      </pre>
-      <pre>
-        <h3>Code for its execution:</h3>
-        <code class="language-javascript">
-
-        </code>
-      </pre>
-      <button id="exercise5-btn">Execute</button>
-    </article>
     <footer>
       <a class="nav-button" href="../arrow-functions/arrow-functions.html"
         >01 - ARROW FINCTIONS</a
