@@ -28,17 +28,22 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
   min-width: 320px;
   min-height: 100vh;
 }
 
 footer {
+  margin: auto;
+  margin-bottom: 0;
   display: flex;
-  width: 100%;
+  width: fit-content;
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  background-color: #213547;
+  padding: 0.6rem 2rem;
+  border-radius: 1rem;
 }
 
 h1 {
@@ -104,4 +109,15 @@ article {
   justify-content: end;
   font-size: 24px;
   font-style: italic;
+}
+
+#main-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav-button {
+  background-color: #213547;
+  border: none;
 }

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arrow function exercises</title>
+    <title>Ternary operator exercises</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script type="module" src="./arrow-functions.js"></script>
+    <script type="module" src="./ternary-operators.js"></script>
     <link
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
@@ -16,7 +16,7 @@
     </script>
   </head>
   <body>
-    <h1>Arrow function exercises</h1>
+    <h1>Ternary operator exercises</h1>
     <div id="console-explanation">
       <span>
         All executions of the exercises will display on the console!
@@ -28,16 +28,18 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-            const addition = (a, b) => {
-                return a + b
-            }
+          const canDrive = (age) => {
+            age > 18 ?
+            console.log('You can drive') :
+            console.log('You can not drive')
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          const result = addition(12, 24)
-          console.log(result)
+          canDrive(21)
+          canDrive(16)
         </code>
       </pre>
       <button id="exercise1-btn">Execute</button>
@@ -48,16 +50,13 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-            const randomNumber = () => {
-                return Math.floor(Math.random() * 101)
-            }
+            
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          const result = randomNumber()
-          console.log(result)
+          
         </code>
       </pre>
       <button id="exercise2-btn">Execute</button>
@@ -68,22 +67,13 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          class Person {
-            constructor(name) {
-              this.name = name
-            }
           
-            greet = () => {
-              console.log('Hello, ' + this.name)
-            }
-          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          const manolo = new Person('Manolo')
-          manolo.greet()
+          
         </code>
       </pre>
       <button id="exercise3-btn">Execute</button>
@@ -94,18 +84,13 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          const printNumbers = (numbersArray = []) => {
-            for (let i = 0; i < numbersArray.length - 1; i++) {
-              console.log(numbersArray[i])
-            }
-          }
+          
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          const numbers = [1, 2, 3, 4, 5]
-          printNumbers(numbers)
+          
         </code>
       </pre>
       <button id="exercise4-btn">Execute</button>
@@ -116,25 +101,23 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          const delayedMessage = (message) =>
-            setTimeout(() => {
-              console.log(message)
-            }, 3000)
+          
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          delayedMessage("Let's do this!")
+
         </code>
       </pre>
       <button id="exercise5-btn">Execute</button>
     </article>
     <footer>
-      <a href="../index.html">HOME</a>
-      <a href="../ternary-operations/ternary-operators.html"
-        >02 - TERNARY OPERATORS</a
+      <a class="nav-button" href="../arrow-functions/arrow-functions.html"
+        >01 - ARROW FINCTIONS</a
       >
+      <a class="nav-button" href="../index.html">HOME</a>
+      <a class="nav-button" href="">03 - CALLBACKS</a>
     </footer>
   </body>
 </html>
