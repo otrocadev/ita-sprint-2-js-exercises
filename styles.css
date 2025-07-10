@@ -36,6 +36,7 @@ body {
 footer {
   margin: auto;
   margin-bottom: 0;
+  margin-top: 2rem;
   display: flex;
   width: fit-content;
   justify-content: center;
@@ -99,8 +100,22 @@ pre {
   margin: 0;
 }
 
-article {
-  margin: 2rem;
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  border: 2px solid yellowgreen;
+  border-radius: 0.6rem;
+  padding: 0 1rem;
+}
+
+details[open] {
+  margin-bottom: 1rem;
+
+  svg {
+    display: none;
+  }
 }
 
 #console-explanation {
