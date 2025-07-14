@@ -40,3 +40,10 @@ To get a local copy up and running follow these simple steps:
 4.	**Open index.html in your browser**
 -	You can simply double-click the file
 -	Or use Live Server if you work with VS Code
+
+## To Do
+
+>>>[INFO]
+>>> The page is not completed. The following things are missing:
+
+- [ ] Finish the last section (7.Promisses & asinc/await)
