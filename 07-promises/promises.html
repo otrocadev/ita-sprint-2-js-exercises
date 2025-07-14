@@ -29,7 +29,11 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const promise1 = new Promise((res) => {
+            setTimeout(() => {
+              res('Hello, world')
+            }, 2000)
+          })
         </code>
       </pre>
     </article>
@@ -39,50 +43,43 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
-        </code>
-      </pre>
-      <pre>
-        <h3>Code for its execution:</h3>
-        <code class="language-javascript">
-
+          promise1.then((res) => console.log(res))
         </code>
       </pre>
       <button id="exercise2-btn">Execute</button>
     </article>
 
     <article>
-      <h2>Exercise 3.1</h2>
+      <h2>Exercise 3</h2>
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const sayHello = async (input) => {
+            return new Promise((res, err) => {
+              if (input === 'Hello') {
+                setTimeout(() => {
+                  res('Hello, world')
+                }, 2000)
+                return
+              }
+              err('The input is not "Hello"')
+            })
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-          
-        </code>
-      </pre>
-      <button id="exercise31-btn">Execute</button>
-    </article>
+          sayHello('Hola')
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
 
-    <article>
-      <h2>Exercise 3.2</h2>
-      <pre>
-        <h3>Function declaration:</h3>
-        <code class="language-javascript">
-          
+          sayHello('Hello')
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))          
         </code>
       </pre>
-      <pre>
-        <h3>Code for its execution:</h3>
-        <code class="language-javascript">
-
-        </code>
-      </pre>
-      <button id="exercise32-btn">Execute</button>
+      <button id="exercise3-btn">Execute</button>
     </article>
 
     <article>
@@ -90,16 +87,63 @@
       <pre>
         <h3>Function declaration:</h3>
         <code class="language-javascript">
-          
+          const waitForResult = async () => {
+            const result = await promise1
+            return result
+          }
         </code>
       </pre>
       <pre>
         <h3>Code for its execution:</h3>
         <code class="language-javascript">
-
+          waitForResult().then((res) => console.log(res))
         </code>
       </pre>
       <button id="exercise4-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 5</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          try {
+            waitForResult().then((res) => console.log(res))
+          } catch (error) {
+            console.log(error)
+          }
+        </code>
+      </pre>
+      <button id="exercise5-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 6</h2>
+      <pre>
+        <h3>Functios declaration:</h3>
+        <code class="language-javascript">       
+          const promise6a = new Promise((res) => {
+            setTimeout(() => {
+              res('I have waited for 2 seconds...')
+            }, 2000)
+          })
+
+          const promise6b = new Promise((res) => {
+            setTimeout(() => {
+              res('Well, I have waited for 3...')
+            }, 3000)
+          })
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          Promise.all([promise6a, promise6b]).then((results) => {
+            console.log(results)
+          })  
+        </code>
+      </pre>
+      <button id="exercise6-btn">Execute</button>
     </article>
 
     <footer>
