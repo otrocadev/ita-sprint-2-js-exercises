@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array loops</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="/javascript.svg" />
+    <script type="module" src="./array-loops.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+  </head>
+  <body>
+    <h1>Array loop exercises</h1>
+    <div id="console-explanation">
+      <span>
+        All executions of the exercises will display on the console!
+      </span>
+      <img src="../arrow.svg" alt="" />
+    </div>
+    <article>
+      <h2>Exercise 1</h2>
+      <pre>
+        <h3>Array loop:</h3>
+        <code class="language-javascript">
+          let names = ['Anna', 'Bernat', 'Clara']
+          names.forEach((name) => console.log(name))
+        </code>
+      </pre>
+      <button id="exercise1-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 2</h2>
+      <pre>
+        <h3>Array loop:</h3>
+        <code class="language-javascript">
+          let names = ['Anna', 'Bernat', 'Clara']
+          for (const element of names) console.log(element)
+        </code>
+      </pre>
+      <button id="exercise2-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 3</h2>
+      <pre>
+        <h3>Array transformation:</h3>
+        <code class="language-javascript">
+          let numbers = [1, 2, 3, 4, 5, 6]
+          const evenNumbers = numbers.filter((evenNumber) => evenNumber % 2 === 0)
+        </code>
+      </pre>
+      <pre>
+        <h3>Code to see result:</h3>
+        <code class="language-javascript">
+          console.log(evenNumbers)
+        </code>
+      </pre>
+      <button id="exercise3-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 4</h2>
+      <pre>
+        <h3>Array loop:</h3>
+        <code class="language-javascript">
+          let obj = {
+          nom: 'Ona',
+            edat: 25,
+            ciutat: 'Barcelona',
+          }
+
+          for (const key in obj) console.log(key + ': ' + obj[key])
+        </code>
+      </pre>
+      <button id="exercise4-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 5</h2>
+      <pre>
+        <h3>Array loop:</h3>
+        <code class="language-javascript">
+          let numbers = [1, 2, 3, 4, 5, 6]
+
+          for (const number of numbers) {
+            if (number === 5) break
+            console.log(number)
+          }
+        </code>
+      </pre>
+      <button id="exercise5-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 6</h2>
+      <pre>
+        <h3>Array loop:</h3>
+        <code class="language-javascript">
+          let names = ['Anna', 'Bernat', 'Clara']
+
+          for (const number of numbers) {
+            console.log(number + ': ' + numbers[number])
+          }
+        </code>
+      </pre>
+      <button id="exercise6-btn">Execute</button>
+    </article>
+
+    <footer>
+      <a
+        class="nav-button"
+        href="../05-array-transformations/array-transformations.html"
+        >05 - ARRAY TRANSFORMATIONS</a
+      >
+      <a class="nav-button" href="../index.html">HOME</a>
+      <a class="nav-button" href="../07-promises/promises.html"
+        >07 - PROMISSES & ASYNC/AWAIT</a
+      >
+    </footer>
+  </body>
+</html>

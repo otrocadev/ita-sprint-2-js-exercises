@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest & Spread operators exercises</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="/javascript.svg" />
+    <script type="module" src="./resest-and-spread.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+  </head>
+  <body>
+    <h1>Rest & Spread operators exercises</h1>
+    <div id="console-explanation">
+      <span>
+        All executions of the exercises will display on the console!
+      </span>
+      <img src="../arrow.svg" alt="" />
+    </div>
+    <article>
+      <h2>Exercise 1</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const numbers1 = [1, 2, 3, 5, 8]
+          const numbers2 = [2, 4, 6, 8, 10]
+
+          const allNumbers = [...numbers1, ...numbers2]
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          console.log(allNumbers)
+        </code>
+      </pre>
+      <button id="exercise1-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 2</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const addition = (...numbers) => {
+            let total = 0
+            for (let number of numbers) {
+              total += number
+            }
+            return total
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          const numbers = [1, 2, 3]
+          console.log(addition(...numbers))
+        </code>
+      </pre>
+      <button id="exercise2-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 3</h2>
+      <pre>
+        <h3>Object declaration and copy:</h3>
+        <code class="language-javascript">
+          const fiatPanda2000 = {
+            brand: 'FIAT',
+            model: 'PANDA',
+            engine: '2.0',
+          }
+
+          const fiatPanda2001 = { ...fiatPanda2000 }
+          fiatPanda2001.engine = '2.2'
+        </code>
+      </pre>
+      <pre>
+        <h3>Code to show them:</h3>
+        <code class="language-javascript">
+          console.log(fiatPanda2000)
+          console.log(fiatPanda2001)
+        </code>
+      </pre>
+      <button id="exercise3-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 4</h2>
+      <pre>
+        <h3>Array declarations:</h3>
+        <code class="language-javascript">
+          const fruits = ['apple', 'bannana', 'pineapple', 'orange', 'strawberry']
+
+          const [fruit1, fruit2, ...allOtherFruits] = fruits
+        </code>
+      </pre>
+      <pre>
+        <h3>Code to show them:</h3>
+        <code class="language-javascript">
+          console.log(`The first fruit is ${fruit1}`)
+          console.log(`The second fruit is ${fruit2}`)
+          console.log(`All the other fruits are ${allOtherFruits}`)
+        </code>
+      </pre>
+      <button id="exercise4-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 5</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const multiply3Numbers = (a, b, c) => {
+            return a * b * c
+          }          
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          const numbersToMultiply = [1, 3, 4]
+          console.log(multiply3Numbers(...numbersToMultiply))
+        </code>
+      </pre>
+      <button id="exercise5-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 6</h2>
+      <pre>
+        <h3>Objects declaration:</h3>
+        <code class="language-javascript">
+          const stone = {
+            color: 'gray',
+            durability: '25',
+          }
+          
+          const axe = {
+            toolName: 'axe',
+            use: 'cuting trees',
+          }
+          
+          const stoneAxe = { ...stone, ...axe}
+        </code>
+      </pre>
+      <pre>
+        <h3>Code to show them:</h3>
+        <code class="language-javascript">
+          console.log(stoneAxe)
+        </code>
+      </pre>
+      <button id="exercise6-btn">Execute</button>
+    </article>
+
+    <footer>
+      <a class="nav-button" href="../03-callbacks/callbacks.html"
+        >03 - CALLBAKS</a
+      >
+      <a class="nav-button" href="../index.html">HOME</a>
+      <a
+        class="nav-button"
+        href="../05-array-transformations/array-transformations.html"
+        >05 - ARRAY TRANSFORMATIONS</a
+      >
+    </footer>
+  </body>
+</html>

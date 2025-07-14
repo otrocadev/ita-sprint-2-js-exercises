@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary operator exercises</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="/javascript.svg" />
+    <script type="module" src="./ternary-operators.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+  </head>
+  <body>
+    <h1>Ternary operator exercises</h1>
+    <div id="console-explanation">
+      <span>
+        All executions of the exercises will display on the console!
+      </span>
+      <img src="../arrow.svg" alt="" />
+    </div>
+    <article>
+      <h2>Exercise 1</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const canDrive = (age) => {
+            age > 18 ?
+            console.log('You can drive') :
+            console.log('You can not drive')
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          canDrive(21)
+          canDrive(16)
+        </code>
+      </pre>
+      <button id="exercise1-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 2</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const biggerNumber = (number1, number2) => {
+            number1 > number2
+              ? console.log(
+                  `${number1} is bigger than ${number2}, so the first number is bigger`
+                )
+              : console.log(
+                  `${number1} is not bigger than ${number2}, so the second number is bigger`
+                )
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          biggerNumber(12, 13)
+          biggerNumber(222, 1)
+        </code>
+      </pre>
+      <button id="exercise2-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 3.1</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const numberSign = (number) => {
+            number === 0
+              ? console.log(`The number ${number} is zero!`)
+              : number > 0
+              ? console.log(`The number ${number} is bigger than zero`)
+              : console.log(`The number ${number} is smaller than zero`)
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          numberSign(33)
+          numberSign(0)
+          numberSign(-1999)
+        </code>
+      </pre>
+      <button id="exercise31-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 3.2</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const findMax = (a, b, c) => {
+            let maxNumber = undefined
+            a > b ? (maxNumber = a) : (maxNumber = b)
+            c > maxNumber ? (maxNumber = c) : (maxNumber = maxNumber)
+            console.log(maxNumber)
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          findMax(22, 13, 24)
+        </code>
+      </pre>
+      <button id="exercise32-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercise 4</h2>
+      <pre>
+        <h3>Function declaration:</h3>
+        <code class="language-javascript">
+          const isItEven = (numbers = []) => {
+            for (let i = 0; i < numbers.length; i++) {
+              const message = 
+                `The value of the position ${i} in the array is ${numbers[i]}, so it is an `
+              numbers[i] % 2 == 0
+                ? console.log(message + 'even number')
+                : console.log(message + 'uneven number')
+            }
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Code for its execution:</h3>
+        <code class="language-javascript">
+          isItEven([12, 13, 25, 33])
+        </code>
+      </pre>
+      <button id="exercise4-btn">Execute</button>
+    </article>
+
+    <footer>
+      <a class="nav-button" href="../01-arrow-functions/arrow-functions.html"
+        >01 - ARROW FUNCTIONS</a
+      >
+      <a class="nav-button" href="../index.html">HOME</a>
+      <a class="nav-button" href="../03-callbacks/callbacks.html"
+        >03 - CALLBACKS</a
+      >
+    </footer>
+  </body>
+</html>
