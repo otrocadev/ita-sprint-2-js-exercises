@@ -41,7 +41,7 @@ const processString = (word, callback) => {
 }
 
 const showWord = (word) => {
-  console.log(`Your apitalized word is ${word}`)
+  console.log(`Your capitalized word is ${word}`)
 }
 
 // HTML interactions
