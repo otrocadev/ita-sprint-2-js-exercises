@@ -1,4 +1,4 @@
-# Sprint 2 (2.1. Basic JavaScript exercises - IT Academy FrontEnd Course
+# Sprint 2.1. Basic JavaScript exercises - IT Academy FrontEnd Course
 
 ## 🎯 Objectives
 
